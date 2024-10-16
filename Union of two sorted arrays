@@ -1,0 +1,8 @@
+vector<int> findUnion(int arr1[], int arr2[], int n, int m)
+    {
+        set<int> s1(arr1, arr1 + n);
+        set<int> s2(arr2, arr2 + m);
+        vector<int> result;
+        set_union(s1.begin(), s1.end(), s2.begin(), s2.end(), back_inserter(result));
+        return result;
+    }
